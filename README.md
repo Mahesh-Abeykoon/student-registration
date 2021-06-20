@@ -12,4 +12,4 @@
   </p>
 </p>
 
-[![Site preview](interfaces\int1)](https://Mah-eshh.github.io/)
+[![Site preview](interfaces\int1.png)](https://Mah-eshh.github.io/)

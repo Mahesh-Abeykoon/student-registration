@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Simple responsive Web Site</title>
+    <style>
+      /*reset*/
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Arial", sans-serif;
+      }
+      ul {
+        padding-left: 0;
+      }
+
+      h1 {
+        font-size: 50px;
+        margin-bottom: 15px;
+      }
+      h2 {
+        margin: 25px 0 20px 0;
+      }
+      h5 {
+        margin-bottom: 15px;
+      }
+      .clear::before,
+      .clear::after {
+        content: " ";
+        display: block;
+        clear: both;
+      }
+
+      /*header*/
+      .headerTop {
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        background-color: yellow;
+        padding: 15px 0;
+      }
+      .logo {
+        height: 400px;
+        text-align: center;
+        background-color: cadetblue;
+        color: #fff;
+        position: relative;
+      }
+      .logoContent {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 30%;
+        width: 50%;
+        margin: auto;
+      }
+
+      /*navigation*/
+      .navigation ul {
+        background-color: #333;
+        list-style-type: none;
+        overflow: hidden;
+      }
+      .navigation ul li {
+        float: left;
+      }
+      .navigation ul li a {
+        display: block;
+        text-decoration: none;
+        font-size: 18px;
+        color: #fff;
+        padding: 12px 18px;
+      }
+      .navigation ul li a:hover {
+        background-color: #fff;
+        color: #000;
+      }
+      /*navigation/*/
+      /*/header*/
+
+      /*main*/
+      .main {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .leftSide,
+      .rightSide {
+        /*			float: left;*/
+        padding: 0 20px 20px 20px;
+      }
+      .leftSide {
+        width: 25%;
+        background-color: #f1f1f1;
+      }
+      .rightSide {
+        width: 75%;
+      }
+      .fakeImg,
+      .fakeImg1 {
+        background-color: #aaaaaa;
+        width: 100%;
+        padding: 10px 0 0 20px;
+      }
+      .fakeImg {
+        height: 400px;
+      }
+      .fakeImg1 {
+        height: 50px;
+        margin-bottom: 15px;
+      }
+      .leftSide p,
+      .rightSide p {
+        margin: 10px 0;
+      }
+      /*/main*/
+
+      /*footer*/
+      .footer {
+        background-color: #dddddd;
+        padding: 50px 0;
+        text-align: center;
+      }
+      /*/fotter*/
+
+      /*Media queries*/
+      @media screen and (max-width: 700px) {
+        .navigation ul li {
+          float: none;
+          text-align: center;
+        }
+        .main {
+          display: block;
+        }
+        .leftSide,
+        .rightSide {
+          width: 100%;
+        }
+        .fakeImg {
+          height: 300px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!--header-->
+    <div class="header">
+      <div class="headerTop">
+        <p>Resize the browser window to see the responsive effect.</p>
+      </div>
+      <div class="logo">
+        <div class="logoContent">
+          <h1>My WebSite</h1>
+          <p>With a flexible layout</p>
+        </div>
+      </div>
+      <div class="navigation">
+        <ul>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+        </ul>
+      </div>
+    </div>
+    <!--/header-->
+
+    <!--main-->
+    <div class="main">
+      <div class="leftSide">
+        <h2>About me</h2>
+        <h5>Photo me:</h5>
+        <div class="fakeImg">Image</div>
+        <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+        <h3>More Text</h3>
+        <p>Lorem ipsum dolor sit ame.</p>
+        <div class="fakeImg1">Image</div>
+        <div class="fakeImg1">Image</div>
+        <div class="fakeImg1">Image</div>
+      </div>
+      <div class="rightSide">
+        <div class="article">
+          <h2>TITLE HEADING</h2>
+          <h5>Title description , Dec 7 , 2017</h5>
+          <div class="fakeImg">Image</div>
+          <p>Some text</p>
+          <p>
+            Sunt in culpa qui officia deserunt mollit anim id est laborum
+            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco.
+          </p>
+        </div>
+        <div class="article">
+          <h2>TITLE HEADING</h2>
+          <h5>Title description , Sep 2 , 2017</h5>
+          <div class="fakeImg">Image</div>
+          <p>Some text..</p>
+          <p>
+            Sunt in culpa qui officia deserunt mollit anim id est laborum
+            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/main-->
+
+    <!--footer-->
+    <div class="footer"><h3>Footer</h3></div>
+    <!--/footer-->
+  </body>
+</html>

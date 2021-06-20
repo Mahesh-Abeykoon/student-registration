@@ -53,13 +53,13 @@ class showStudentDetails extends Component {
           <tbody>
             <tr>
               <th scope="row">1</th>
-              <td>Title</td>
-              <td>{student.title}</td>
+              <td>Name of the student</td>
+              <td>{student.student_name}</td>
             </tr>
             <tr>
               <th scope="row">2</th>
-              <td>Author</td>
-              <td>{student.author}</td>
+              <td>Name of the guardian</td>
+              <td>{student.guardian}</td>
             </tr>
             <tr>
               <th scope="row">3</th>
@@ -68,18 +68,18 @@ class showStudentDetails extends Component {
             </tr>
             <tr>
               <th scope="row">4</th>
-              <td>Publisher</td>
-              <td>{student.publisher}</td>
+              <td>Addrees of the student</td>
+              <td>{student.address}</td>
             </tr>
             <tr>
               <th scope="row">5</th>
-              <td>Published Date</td>
-              <td>{student.published_date}</td>
+              <td>Addmitted Date</td>
+              <td>{student.admitted_date}</td>
             </tr>
             <tr>
               <th scope="row">6</th>
-              <td>Description</td>
-              <td>{student.description}</td>
+              <td>Student registration number</td>
+              <td>{student.registration_number}</td>
             </tr>
           </tbody>
         </table>
@@ -98,8 +98,8 @@ class showStudentDetails extends Component {
             </div>
             <br />
             <div className="col-md-8 m-auto">
-              <h1 className="display-4 text-center">Book's Record</h1>
-              <p className="lead text-center">View Book's Info</p>
+              <h1 className="display-4 text-center">Students's Record</h1>
+              <p className="lead text-center">View Student's Info</p>
               <hr /> <br />
             </div>
           </div>

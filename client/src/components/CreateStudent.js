@@ -33,7 +33,7 @@ class CreateStudent extends Component {
     };
 
     axios
-      .post("https://mern-student-registration-app.herokuapp.com/api/students", data)
+      .post("http://localhost:8082/api/students", data)
       .then((res) => {
         this.setState({
           student_name: "",

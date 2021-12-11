@@ -14,7 +14,7 @@ class showStudentDetails extends Component {
   componentDidMount() {
     // console.log("Print id: " + this.props.match.params.id);
     axios
-      .get("https://mern-student-registration-app.herokuapp.com/api/students/" + this.props.match.params.id)
+      .get("http://localhost:8082/api/students/" + this.props.match.params.id)
       .then((res) => {
         // console.log("Print-showBookDetails-API-response: " + res.data);
         this.setState({

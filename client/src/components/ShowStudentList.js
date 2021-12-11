@@ -14,7 +14,7 @@ class ShowStudentList extends Component {
 
   componentDidMount() {
     axios
-      .get("https://mern-student-registration-app.herokuapp.com/api/students")
+      .get("http://localhost:8082/api/students")
       .then((res) => {
         this.setState({
           students: res.data,

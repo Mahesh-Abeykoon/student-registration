@@ -112,7 +112,7 @@ class showStudentDetails extends Component {
                 className="btn btn-outline-danger btn-lg btn-block"
                 onClick={this.onDeleteClick.bind(this, student._id)}
               >
-                Delete Book
+                Delete Student
               </button>
               <br />
             </div>
@@ -122,7 +122,7 @@ class showStudentDetails extends Component {
                 to={`/edit-student/${student._id}`}
                 className="btn btn-outline-info btn-lg btn-block"
               >
-                Edit Book
+                Edit Student
               </Link>
               <br />
             </div>

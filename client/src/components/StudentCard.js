@@ -6,7 +6,7 @@ const StudentCard = (props) => {
   const student = props.student;
 
   return (
-    <div className="card-container">
+    <div className="col-md-6">
       <img
         src="https://extend.schoolwires.com/ClipartGallery/images/34626102.gif"
         alt=""

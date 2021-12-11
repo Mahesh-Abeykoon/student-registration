@@ -18,6 +18,12 @@ app.use(express.json({ extended: false }));
 
 app.get("/", (req, res) => res.send("Hello world!")); // this is need not to initial
 
+
+//for testing deploy
+app.get('/', (req,res)=> {
+    res.send("It's working !");
+});
+
 // use Routes
 app.use("/api/students", students);
 

@@ -16,7 +16,7 @@ app.use(cors({ origin: true, credentials: true, useFindAndModify: false }));
 // Init Middleware
 app.use(express.json({ extended: false }));
 
-app.get("/", (req, res) => res.send("Hello !")); // this is need not to initial
+app.get("/", (req, res) => res.send("Hello world!")); // this is need not to initial
 
 
 

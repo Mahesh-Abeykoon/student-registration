@@ -14,7 +14,7 @@ class showStudentDetails extends Component {
   componentDidMount() {
     // console.log("Print id: " + this.props.match.params.id);
     axios
-      .get("http://localhost:8082/api/students/" + this.props.match.params.id)
+      .get("https://mern-student-registration-app.herokuapp.com/api/students/" + this.props.match.params.id)
       .then((res) => {
         // console.log("Print-showBookDetails-API-response: " + res.data);
         this.setState({
@@ -112,7 +112,7 @@ class showStudentDetails extends Component {
                 className="btn btn-outline-danger btn-lg btn-block"
                 onClick={this.onDeleteClick.bind(this, student._id)}
               >
-                Delete Book
+                Delete Student
               </button>
               <br />
             </div>
@@ -122,7 +122,7 @@ class showStudentDetails extends Component {
                 to={`/edit-student/${student._id}`}
                 className="btn btn-outline-info btn-lg btn-block"
               >
-                Edit Book
+                Edit Student
               </Link>
               <br />
             </div>

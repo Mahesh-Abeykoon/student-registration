@@ -9,7 +9,7 @@ const Student = require("../../models/Student");
 // @route GET api/books/test
 // @description tests books route
 
-router.get("/test", (req, res) => res.send("book route testing!"));
+router.get("/test", (req, res) => res.send("Student route testing!"));
 
 // @route GET api/books
 // @description Get all books
@@ -17,7 +17,7 @@ router.get("/test", (req, res) => res.send("book route testing!"));
 router.get("/", (req, res) => {
   Student.find()
     .then((student) => res.json(student))
-    .catch((err) => res.status(404).json({ nobooksfound: "No Books found" }));
+    .catch((err) => res.status(404).json({ nobooksfound: "No Student found" }));
 });
 
 // @route GET api/books/:id
@@ -26,7 +26,7 @@ router.get("/", (req, res) => {
 router.get("/:id", (req, res) => {
   Student.findById(req.params.id)
     .then((student) => res.json(student))
-    .catch((err) => res.status(404).json({ nobookfound: "No Book found" }));
+    .catch((err) => res.status(404).json({ nobookfound: "No Student found" }));
 });
 
 // @route GET api/books
@@ -36,11 +36,11 @@ router.post("/", (req, res) => {
   Student.create(req.body)
     .then((student) =>
       res.json({
-        STATUS: "Book Add menu",
-        MESSAGE: "Book added successfully",
+        STATUS: "Student Add menu",
+        MESSAGE: "Student added successfully",
       })
     )
-    .catch((err) => res.status(400).json({ error: "Unable to add this book" }));
+    .catch((err) => res.status(400).json({ error: "Unable to add the Student" }));
 });
 
 // @route GET api/books/:id
@@ -59,8 +59,8 @@ router.put("/:id", (req, res) => {
 
 router.delete("/:id", (req, res) => {
   Student.findByIdAndRemove(req.params.id, req.body)
-    .then((student) => res.json({ mgs: "Book entry deleted successfully" }))
-    .catch((err) => res.status(404).json({ error: "No such a book" }));
+    .then((student) => res.json({ mgs: "Student deleted successfully" }))
+    .catch((err) => res.status(404).json({ error: "No such a Student" }));
 });
 
 module.exports = router;
